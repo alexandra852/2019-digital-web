@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+	/*div>ul>li:nth-child(2){color:red;}*/
+	/*div li:nth-child(2){color:red;} 이렇게써도되고 
+	div>li:nth-child(2){color:red;} 이건 안되고 div에 ul에 li에 자손이기때문에 
+	/*ul>li:nth-child(2){color:red;} 이렇게써도되고 */
+
+	/*li.red{color:red;}*/
+	/*앞에 지정해주면 다른 클레스 안들어가고 지정한 것만 색깔이 바뀐다 */
+	*{margin:0;}
+	.box1{background-color: violet;width:150px;display:inline-block;
+		opacity: 0.2}
+		/*0으로 놓게되면 해당되는 박스가 효용도가 없어진다 배경하고 색하고 같이 빠진다 애니메이션 (0과 1 사이*)/*/
+	.box2{background-color: red;width:150px;visibility: hidden}
+	.box3{background-color: skyblue;width:150px;display:inline-block;}
+	/*인나인블럭은 마진값과 여러가지 값을 수정할수있다는것 none 로 하면 사라진다 가지속성중에 디스플레이  
+	/*디즈빌리티는 영역을 보여주고 표시해주고 히든은 자리공간을 놓고 빈공간으로 보인다  논은 아예 안보이고 */
+
+
+	</style>
+</head>
+<body>
+		<!-- div>h1>lorem5^h2>lorem2^ul>li*3>lorem2 -->
+		<!-- <div> -->
+			<!-- <h1  class="red">Lorem ipsum dolor sit amet.</h1> -->
+			<!-- <h2>Lorem ipsum.</h2> -->
+			<!-- <ul> -->
+				<!-- <li>Lorem ipsum.</li> -->
+				<!-- <li class="red">Vel, provident!</li> color:red -->
+				<!-- <li>Magni, unde.</li> -->
+			<!-- </ul> -->
+		<!-- </div> -->
+		<!-- div.box$*3>{안녕하세요$} -->
+		<div class="box1">안녕하세요1</div><div class="box2">안녕하세요2</div><div class="box3">안녕하세요3</div>
+	
+
+</body>
+</html>
