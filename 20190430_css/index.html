@@ -26,8 +26,29 @@
 		div.text>div:nth-child(4){background-color:green}
 		div.text>div:nth-child(5){background-color:blue}
 
+		div.bb{width: 300px;height: 200px;background-color:orange;
+			/*border-width:10px;
+			border-style:dashed;
+			border-color:red;*/
+			border-top:10px solid red;}
+			/*bd+*단축키/*/
+			div.rb{width: 100px;height: 50px;
+				background-color: skyblue;
+				border-radius:25px;
+				margin-left:30px;
+				text-align:center;
+				line-height: 50px;
+				box-sizing:border-box;}
+				/*글자 가운데로 하는거 */
+				/*div.rb:hover{background-color: blue; color:white;}*/
+				/*마우스를 대면 색은 블루로 글씨는 하얀색으로 */
+				.rb:hover{background-color: white;border:2px solid blue;line-height: 46px}
+				/*마우스를 대면 색은 흰색 테두리는 블루*/
 
-	/*div{width:100px;height:100px;background-color:red;*/
+
+
+
+	/*div{width:100px;height:100px;background-color:red;
 		 /*border:20px solid black;*/
 		 /*padding:20px;*/
 		 /*border-width:20px;*/
@@ -53,6 +74,12 @@
 				<div>4</div>
 				<div>5</div>
 			</div>	
+			<div class="bb"></div><br><br>
+			<div class="rb">더보기</div>
+			<!-- .bb 단축키  -->
+			<!-- <div id="bb"></div> -->
+			<!-- #bb 단축키 -->
+
 			<!-- div.text>div*5>{$}		 -->
 </body>
 </html>
