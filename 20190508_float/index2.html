@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>연습용이다요</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		li{list-style:none;}
+		a:link,a:visited{color:black;}
+		a{text-decoration:none; color: black;}
+
+		nav.menu_wap{
+			width: 980px;
+			margin: 0 auto;
+		}
+		nav.menu_wap>ul:after{
+			content: "";
+			clear:both;
+			display: block;
+		}
+		nav.menu_wap>ul>li{
+			float:left;width:16.66%;
+			background-color: #1D5DA4;
+		}
+		nav.menu_wap>ul>li>a{
+			display: block;
+			text-align:center;
+			line-height: 45px;
+			color:white;
+			font-weight: bold;
+		}
+		nav.menu_wap>ul>li>a:hover{color:black;background-color: #477ebb;}
+		div.visual{height: 300px;background-color: pink;}
+		div.visual:hover{background-color: skyblue;cursor:pointer;}
+	</style>
+</head>
+<body>
+	<nav class="menu_wap">
+		<ul>
+			<li><a href="#">회사소개</a></li>
+			<li><a href="#">제품소개</a></li>
+			<li><a href="#">사업영역</a></li>
+			<li><a href="#">고객센터</a></li>
+			<li><a href="#">사회공헌</a></li>
+			<li><a href="#">인재채용</a></li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>

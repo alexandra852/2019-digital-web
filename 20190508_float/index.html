@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		div.wrap{
+			width: 500px;
+			margin: 0 auto;
+			background-color: gray;
+		}
+		div.wrap:after{content:"";clear:both;display: block;}
+		div.wrap>div.box01{
+			float:left;width: 200px;
+			background-color: skyblue;
+			margin-left:25px;
+		}
+		div.wrap>div.box02{
+			float:right;width: 200px;
+			background-color: pink;
+			margin-right:25px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="box01">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, facere.
+	    </div>
+		<div class="box02">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque harum facilis saepe expedita, repellendus dolor obcaecati, repellat at impedit dolore!</div>
+	</div>
+	<div style="height: 100px;background-color:violet"></div>
+	<!-- 블럭단위요소는 100퍼로 나온다  -->
+</body>
+</html>
