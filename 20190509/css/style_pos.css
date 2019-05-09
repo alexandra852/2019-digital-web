@@ -1,0 +1,72 @@
+@charset"utf-8";
+nav.menu_wrap{
+	width: 980px;height: 45px;
+	margin: 0 auto;
+	background-color:skyblue;
+	}
+/*nav.menu_wrap>ul:after{
+	content: "";
+	clear:both;
+	display: block;*/
+}
+nav.menu_wrap>ul>li{
+	float:left;
+}
+nav.menu_wrap>ul>li>a{
+	width: 163.33px;
+ display: block; 
+ line-height: 45px;
+ text-align: center;
+ font-weight: bold;
+
+}
+
+nav.menu_wrap>ul>li>a:hover{background-color: blue;color:white;}
+/*header*/
+header#header_wrap{
+	width: 980px;height:50px;
+	margin: 0 auto;
+	background-color: gray;
+	position: relative;
+}
+/*header#header_wrap:after{ 
+	content: "";
+	clear: both;
+	display: block;
+}*/
+header#header_wrap>h1{
+	width: 150px;
+	background-color:pink;
+	line-height:50px; 
+	height: 50px;
+}
+header#header_wrap>nav.menu_wapper{
+	width: 800px;
+	background-color:skyblue;
+	line-height: 50px;
+	height: 50px;
+	position: absolute;right:0;top: 0;
+	text-align:center;
+}
+/*content*/
+div#content{
+	width: 980px;height: 400px;
+	text-align:center;
+	line-height:400px;
+	background-color: #cdcdcd;
+	margin: 0 auto; 
+}
+
+/*footer*/
+#footer_wrap{width: 980px;height: 100px; 
+	text-align:center;
+	line-height:100px; background-color: violet;
+	margin: 0 auto;
+	}
+/*중요 어디안에 있는지 잘확인하기!!*/
+	header#header_wrap>nav.menu_wapper>ul{}
+	header#header_wrap>nav.menu_wapper>ul>li:nth-child(2n){background-color: white;}
+	header#header_wrap>nav.menu_wapper>ul:after{content:"";clear:both;display:block;}
+	header#header_wrap>nav.menu_wapper>ul>li{float:left;width: 160px;}
+	header#header_wrap>nav.menu_wapper>ul>li>a{display: block;font-weight: bold}
+	header#header_wrap>nav.menu_wapper>ul>li>a:hover{background-color:pink;color:white;}
