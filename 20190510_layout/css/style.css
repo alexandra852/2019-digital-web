@@ -1,0 +1,58 @@
+@charset"utf-8";
+
+/*header*/
+header#header_wrap{
+	width: 980px;height: 100px;
+	margin: 0 auto;
+	 background-color: gray;
+	 position: relative;/*안쪽에 가둬진다 */
+	}
+header#header_wrap>h1{
+	width:100px;
+	margin: 0 auto;
+	 background-color:#f9d8ee;
+	 text-align: center;
+	}
+header#header_wrap>div.util_menu{
+	/*width: 300px;height: 35px;*/
+	background-color:skyblue;
+	position: absolute;right: 0;top: 10px;/* poa단축키*/ 
+	text-align: center;
+}
+header#header_wrap>div.util_menu>ul>li{
+	float:left; 
+	/*width: 75px;*/   /*위에 적힌 위드스값/나눠진 순 해서 나온거 */
+	
+ /*a에다가 넣어도되고 li에다가 넣어도된다.*/
+;border-right: 1px solid black;
+}
+header#header_wrap>div.util_menu>ul>li>a{
+	display: block;
+	font-weight: bold; 
+	line-height: 35px;
+	padding:0 15px; /*안쪽을 늘려준다 아아앙*/
+}
+header#header_wrap>div.util_menu>ul>li>a:hover{background-color:pink;}
+header#header_wrap>div.util_menu>ul>li:hover > a{color:white;}
+header#header_wrap>div.util_menu>ul>li:last-child{border:none;} /*라인 넣는거*/ 
+
+header#header_wrap>nav.gnb_wrap{
+	width: 980px;height: 45px; 
+	background-color:blue;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+header#header_wrap>nav.gnb_wrap>ul>li{
+	float:left;
+	 width:163.33px;
+}
+header#header_wrap>nav.gnb_wrap>ul>li>a{
+	display: block;
+	font-weight: bold;
+	line-height: 45px; 
+	border-right: 1px solid white; /*옆에 ㅣ 줄생기게 만드는거 */
+	color:white;
+}
+header#header_wrap>nav.gnb_wrap>ul>li>a:hover{background-color:skyblue;color:white;}
