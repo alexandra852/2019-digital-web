@@ -35,7 +35,7 @@ header#header_warp>div.main_menu{
  background-color: pink;
 position: absolute;right: 0; bottom:0px;
  margin: 0 auto;
-line-height: 60px;
+line-height: 60px; /*중간으로 오는거*/ 
 
 }
 header#header_warp>div.main_menu>ul{}
