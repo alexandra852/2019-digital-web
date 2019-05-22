@@ -33,14 +33,53 @@
 								 <!-- placeholder는 안쪽에 글씨가없으면 나타나고 있음 사라짐  -->
 								<span class="ico pass">비밀번호</span>
 							</p>
-							<p class="field">  <!-- ctrl+shift+g -->
+							<p class="field">  
 								<label for="user-pass2" class="blind">비밀번호 재확인</label>
 								<input type="text" id="user-pass2" placeholder="비밀번호 재확인" class="inp-field"> 
 								 <!-- placeholder는 안쪽에 글씨가없으면 나타나고 있음 사라짐  -->
 								<span class="ico pass2">비밀번호 재확인</span>
 							</p>
-					
+						</fieldset>
+						<fieldset>
+							<legend>개인정보</legend>
+							<p class="field"> 
+								<label for="user-name" class="blind">이름</label>
+								<input type="text" id="user-name" placeholder="이름" class="inp-field w458"> 
+								 <!-- placeholder는 안쪽에 글씨가없으면 나타나고 있음 사라짐  -->
+							</p>
 
+							<p class="field btn-radio"> 
+								<label for="male"class="btn-label male">남자</label>
+								<input type="radio" id="male"name="urer-s" value="male"><!-- name="wrer-s"를 하면 둘중에 하나만 됨 -->
+								 <label for="female"class="btn-label female">여자</label>
+								<input type="radio" id="female"name="urer-s"value="female">
+							</p>
+
+							<p class="field birth">
+							<label for="	user-birth">생일</label>
+							<input type="	text" id="user-birth" placeholder="년(4자)"  maxlength="4"class="inp-field w145" >
+							<select class="field-wall">ㅣ</select>
+							<span name="month" title="11">	</span>	
+
+							<select>
+								<option value="month">월</option>
+								<!-- option[value="$"]*12>{$월} -->
+								<option value="1">1월</option>
+								<option value="2">2월</option>
+								<option value="3">3월</option>
+								<option value="4">4월</option>
+								<option value="5">5월</option>
+								<option value="6">6월</option>
+								<option value="7">7월</option>
+								<option value="8">8월</option>
+								<option value="9">9월</option>
+								<option value="10">10월</option>
+								<option value="11">11월</option>
+								<option value="12">12월</option>
+							</select>
+							<select class="field-wall">ㅣ</select>
+							<input type="text" placeholder="일" maxlength="2"class="inp-field w130">
+							</p>
 						</fieldset>
 					</form>
 				</div>
