@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문자자르기</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		div{width: 200px;height: 200px;background-color: #ddd; margin-bottom: 10px;}
+		div.box1{
+			white-space:nowrap; /*레이어에서 글짜가 넘어가게 만드는거 */
+			overflow:hidden;   /* 간격에 벗어난걸 지운다 */
+			text-overflow:ellipsis; /*....을 만든다 */
+			} 
+		div.box2{white-space:normal;}/* 기본적인거 */
+		div.box3{white-space:pre;}    /*문서에서 띄워져있는만큼 띄워져 있는것*/
+	</style>
+</head>
+<body>
+	<div class="box1">
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+	</div>
+	<div class="box2">
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+	</div>
+	<div class="box3">
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+		Lorem ipsum dolor sit amet.
+	</div>
+</body>
+</html>
