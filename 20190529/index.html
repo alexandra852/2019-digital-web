@@ -2,127 +2,96 @@
 <html lang="ko">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<!-- meta:vp 그 버전에 맞게 나오는거 -->
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
-	<title>mobile</title>
-	<link rel="stylesheet" href="css/reset.css">
-</head>
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
 	<style>
-		/*main_header*/
-		
 		#main_header{
-			height: 45px;
-			background-image:url(img/header_background.png);
-			text-align:center;
+			 height: 45px;
+			text-align: center;
+			background-image: url(img/header_background.png);
 			position: relative;
-
 		}
 		#main_header>h1{color:white;}
 		#main_header>a.left,
 		#main_header>label.right{
-			position: absolute; display: block;height: 32px;
-			 background-image: url(img/sprites.png);
-			 text-indent: -99999px;
+			position: absolute;
+			display: block;
+			height: 32px;
+			background-image: url(img/sprites.png);
+			text-indent: -999999px
+
 		}
 		#main_header>a.left{
-			 width: 62px;
-			 left: 5px;top: 7px;
-			 background-position: 0 0;
-
-			}
+			width: 62px;
+			left: 5px; top: 7px;
+		 	background-position: 0 0; 
+		}
 		#main_header>label.right{
 			width: 32px;
 			right: 5px; top: 7px;
 			background-position: -62px 0;}
 
-			/*toggle gnb*/
-			#toggle_gnb_wrap{
-				padding: 15px; 
-				background-color: #363636;
-			}
-			.toggle_gnb{
-				padding: 5px; 
-				background-color: #fff;
-			}
-			.toggle_gnb>ul>li{float: left;}
-			.toggle_gnb>ul>li>a{
-			 display: block;
-			 width: 80px; 
-			 text-align: center;
-			}
-			#toggle{display:none;}
-			#toggle ~ #toggle_gnb_wrap{display: none;}
-			#toggle:checked ~ #toggle_gnb_wrap{display: block;}
+		/*toggle gnb*/
+		#toggle_gnb_wrap{padding: 15px;
+			background-color: #363636;}
+		.toggle_gnb{}
+		.toggle_gnb>ul{}
+		.toggle_gnb>ul>li{float:left}
+		.toggle_gnb>ul>li>a{
+			display: block;
+			width: 80px;
+			text-align: center;
+		}
+		#toggle{display: none;}
+		#toggle ~ #toggle_gnb_wrap{display: none;}
+		#toggle:checked ~ #toggle_gnb_wrap{display: block;}
 
-			/*top gnb*/
-			#top_gnb{
-				border-bottom: 1px solid #000;
-				background-color: #b42111;
-			}
-			#top_gnb>div{
-				float: left;
-				width: 25%;
-			}
-			#top_gnb>div>a{
-				text-align: center;
-				display: block;
-				line-height:35px;
-				color:#fff;
-			}
-			/*bottom_gnb*/
-			#bottom_gnb{
-				width: 100%; 
-				display:table;
-				border-bottom: 1px solid #000;
-			}
-			#bottom_gnb>div{
-				display: table-cell;
-			}
-			#bottom_gnb>div>a{
-				display: block;
-				height: 35px;
-				text-align: center;
-				line-height: 35px;
-				position: relative;
-			}
-			#bottom_gnb>div>a:after{
-				content:"";
-				display:block; 
-				position: absolute;
-				width: 1px;height: 15px;
-				border-left: 1px solid #000; top:10px;
-				left: -1px;
-			}
+		#top_gnb{
+			border-bottom: 1px solid #000;
+			background-color: #b42111;
+		}
+		#top_gnb>div{
+			float: left;
+			width: 25%;
+		}
+		#top_gnb>div>a{
+			text-align: center;
+			display: block;
+			line-height: 35px;
+			color:#fff;
+		}
+		#bottom_gnb{
+			width: 100%; 
+			display:table;
+			border-bottom: 1px solid #000;}
+		#bottom_gnb>div{display: table-cell;}
+		#bottom_gnb>div>a{display: block;
+			height: 35px;
+			text-align: center;
+			line-height: 35px;
+			position: relative;}
+		#bottom_gnb>div>a:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1px; height: 15px;
+			border-left: 1px solid #000; top: 10px;
+			left: -1px;
+		}
 
+		#section_header{padding: 20px;}
+		#section_article{padding: 10px;}
 
-			/*section*/
-			#section_header{padding: 20px;}
-			#section_article{padding: 10px;}
-			/*footer*/
-			#main_footer{padding: 10px; border-right: 1px solid #000;
-				text-align: center;}
-
-
-
-
-
+		#main_footer{
+			padding: 10px;
+			border-right: 1px solid #000; text-align: center;
+			border-top: 1px solid #000;
+		}
 
 	</style>
-	<script>
-		var num = 0;
-		document.write(num);
-	</script>
-	<script>
-		var num = 1;
-		document.write(num);
-	</script>
-
+</head>
 <body>
-	<script>
-		var num = 2;
-		document.write(num);
-	</script>
 	<div id="wrap">
 		<input type="checkbox" id="toggle">
 		<header id="main_header">
@@ -181,9 +150,5 @@
 			<address>website layout basic</address>
 		</footer>
 	</div>
-	<script>
-		var num = 3;
-		document.write("안녕하세요. " + num + "명 입니다.");
-	</script>
 </body>
 </html>
