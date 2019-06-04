@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+	nav.menu{width: 200px; }
+	nav.menu>ul{}
+	nav.menu>ul>li{
+		/*height: 100px;*/
+
+	}
+	nav.menu>ul>li>a{
+		display: block;
+		background-color:pink;
+		text-align: center;
+		line-height: 50px;
+	}
+	nav.menu>ul>li:hover{background-color:pink;}
+	nav.menu>ul:hover .snbmenu{display:block;}
+	nav.menu>ul>li:hover .snbmenu>li{background-color:violet;}
+
+	.snbmenu{
+		display: none;
+		width: 1000px;
+		height: 50px;
+	}
+	.snbmenu>li{
+		float:left;
+		background-color:#fff;
+		width: 100px; 
+		height: 50px;
+
+
+	}
+	.snbmenu>li>a{
+		display:block;
+		line-height:50px;
+		text-align: center;
+	}
+	.snbmenu>li>a:hover{background-color:#fff;}
+</style>
+<body>
+	<nav class="menu">
+		<ul>
+			<li class="clearfix"><a href="#">menu1</a>
+				<ul class="snbmenu ">
+					<li><a href="#">munu001</a></li>
+					<li><a href="#">munu002</a></li>
+					<li><a href="#">munu003</a></li>
+					<li><a href="#">munu004</a></li>
+				</ul>
+			</li>
+			<li class="clearfix"><a href="#">menu2</a>
+				<ul class="snbmenu">
+					<li><a href="#">munu001</a></li>
+					<li><a href="#">munu002</a></li>
+					<li><a href="#">munu003</a></li>
+					<li><a href="#">munu004</a></li>
+				</ul>
+			</li>
+			<li class="clearfix"><a href="#">menu3</a>
+				<ul class="snbmenu" >
+					<li><a href="#">munu001</a></li>
+					<li><a href="#">munu002</a></li>
+					<li><a href="#">munu003</a></li>
+					<li><a href="#">munu004</a></li>
+				</ul>
+			</li>
+			<li class="clearfix"><a href="#">menu4</a>
+				<ul class="snbmenu" >
+					<li><a href="#">munu001</a></li>
+					<li><a href="#">munu002</a></li>
+					<li><a href="#">munu003</a></li>
+					<li><a href="#">munu004</a></li>
+				</ul>
+			</li>
+			<li class="clearfix"><a href="#">menu5</a>
+				<ul class="snbmenu">
+					<li><a href="#">munu001</a></li>
+					<li><a href="#">munu002</a></li>
+					<li><a href="#">munu003</a></li>
+					<li><a href="#">munu004</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+</body>
+</html>
