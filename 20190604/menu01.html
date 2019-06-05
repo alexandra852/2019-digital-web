@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>가로형</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		nav.menu{
+			 width: 1000px;margin: 0 auto;
+			
+		}
+		nav.menu>ul{position: relative;}
+		nav.menu>ul>li{
+			float: left; 
+			width: 20%;
+			background-color: gray;
+
+		}
+		nav.menu>ul>li>a{
+		 display: block;
+		 line-height: 40px; 
+		 text-align: center; 
+		}
+		nav.menu>ul>li:hover{background-color: skyblue;}
+
+		/*여기서부터 시작 */
+		ul.submenu{
+			display:none;
+			position: absolute; 
+			background-color: skyblue;
+			left: 0;		
+			width: 100%;
+			z-index:2;     /* 순서올리는거 원래다들 0인데 z-index:1; 하면 하나올라감 */
+		}
+		ul.submenu>li{float: left;}
+		ul.submenu>li>a{
+			display: block; 
+			line-height: 30px; 
+			padding:0 15px;
+		}
+
+		/*.menu>ul>li:first-child .submenu{display: block;}*/
+		.menu>ul>li:hover .submenu{display: block;}
+
+		.menu>ul>li:nth-child(4) .submenu{padding-left:560px;}
+		.menu>ul>li:nth-child(5) .submenu{padding-left: 725px;}
+		.menu:hover .menubar{display: block; }    /*같은 라인에 있어야된다 */
+
+		.visual{height: 500px; background-color: violet;}
+		.menubar{
+			width: 100%;height: 30px;
+			display:none;
+			background-color: skyblue;
+			height: 30px; 
+			position: absolute;
+			left: 0;
+			z-index:1;
+
+		}
+
+
+		
+
+
+
+	</style>
+
+</head>
+<body>
+	<nav class="menu">
+		<ul class="clearfix">
+			<li><a href="#">menu1</a>
+				<ul class="submenu clearfix">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu clearfix " style="padding-left: 160px;">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu clearfix" style="padding-left:380px;">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu clearfix">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu clearfix">
+					<li><a href="#">sub0101</a></li>
+					<li><a href="#">sub0102</a></li>
+					<li><a href="#">sub0103</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="menubar"></div>
+	</nav>
+	<div class="visual"></div>
+		
+</body>
+</html>
