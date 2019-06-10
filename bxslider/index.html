@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="../css/reset.css">
+   <link rel="stylesheet" href="css/jquery.bxslider.css"> <!-- bxslider css -->
+
+   <title>slider</title>
+   <script src="js/jquery-3.3.1.min.js"></script> <!-- bxslider plug in -->
+   <script src="js/jquery.bxslider.js"></script>
+   
+   <script>
+      $(document).ready(function(){
+         var myslider = $(".slider").bxSlider({
+         	auto:true,      //자동으로 넘어간다 
+         	pager:false,    //밑에 ㅇㅇㅇ 이 없어짐 
+         	controls:false  // 옆에 <  > 표이 없어짐 
+         });
+         //$(".slider1").bxSlider();     //두개 넣을려면 이렇게 넣으면된다 
+
+         $('.prevBth').click(function(){
+         	myslider.goToPrevSlide();
+         });
+         $('.nextBth').click(function(){
+         	myslider.goToPrevSlide();
+         });
+      });
+   </script>
+   <style>
+   	body{background-color: skyblue;}
+      img{display:block;} /*inline tag 이기 때문에 사이에 틈이 생긴다.*/
+      .wrapper{width:1000px; margin: 0 auto; position: relative;}
+     /* .wrapper1{width:300px; height:300px; margin: 0 auto;}*/
+  		.bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow:none;
+     box-shadow:none; 
+     border: 0 none; 
+     background: #fff; 
+     margin-bottom:0;
+		}
+		.box{
+			height: 300px;
+			background-color:pink;
+		}
+		.bx-wrapper .bx-pager{
+			bottom:30px;
+			font-size:1.5em;
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a.active{
+			background-color: #fff;
+		}
+		.bx-wrapper .bx-pager.bx-default-pager a{
+			background-color: #ff0;
+			width:20px;height:20px;
+			border-radius:10px;
+		}
+
+		.wrapper .prevBtn , .wrapper .nexBtn{
+			position: absolute; top:130px
+		}
+		.wrapper .prevBth{left: 10px;}
+		.wrapper .nextBth{right: 10px;}
+
+		.box1{height: 1000px;}
+
+
+   </style>
+
+</head>
+<body>
+	<div class="box1"></div>
+   <div class="wrapper">
+      <ul class="slider">
+         <li><img src="../images/pc01.jpg" alt=""></li>
+         <li><img src="../images/pc02.jpg" alt=""></li>
+         <li><img src="../images/pc03.jpg" alt=""></li>
+      </ul>	
+   <div class="prevBtn"><a href="#"><img src="bxslider/images/btn_prev.png" alt=""></a></div>
+   <div class="nextBtn"><a href="#"><img src="bxslider/images/btn_next.png" alt=""></a></div>  </div>
+  <div class="box"></div>
+  <!--     <div class="wrapper1">
+      	<ul class="slider1">
+       			
+      		<li><img src="../images/testimg.jpg" alt=""></li>
+      		<li><img src="../images/testimg.jpg" alt=""></li>
+      		<li><img src="../images/testimg.jpg" alt=""></li>
+      			
+      	</ul>
+      </div> -->
+   </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+
+	<title>test</title>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider();
+
+		});
+	</script>
+	<style>
+		img{display: block;}
+		.wrapper{width: 500px;height: 300px;}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="slider">
+			<li><img src="images/pic1.jpg" alt=""></li>
+			<li><img src="images/pic2.jpg" alt=""></li>
+			<li><img src="images/pic3.jpg" alt=""></li>
+		<!-- 	이미지 불러우는거에 에러가 뜨면 css에 들어가서 확인해 본다 이미지 파일 위치를 ! -->
+		
+		</ul>
+	</div>
+	
+</body>
+</html>

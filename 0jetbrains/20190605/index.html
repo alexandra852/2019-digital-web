@@ -5,54 +5,50 @@
 	<meta charset="UTF-8">
 	<title>반복문 for문</title>
 	<style>
-		div{float: left;
-			padding: 10px;}
-			div:nth-child(2n){background-color: skyblue;}
+		div{float: left;padding:10px;display: none;}
+		div:nth-child(2n){background-color:skyblue;}
 	</style>
 	<script>
 		var result;
 		var dan = 2;
-		for(var i=1;i<=9;i++){
-			//result = dan*i;
-			//document.write(dan + " x " + i + " = " + result + "<br>")
+		for(var i=2;i<=9;i++){
+			// result = dan*i;
+			//document.write(dan + " x " + i + " = " + result + "<br>");
 			document.write("<div><h1>" + i + "단</h1>");
-			for(var k =1; k<=9;k++){
-				document.write(i + " x " + k +" =" + i*k+ "<br>");
-
+			for(var k=1;k<=9;k++){
+				result = i*k;
+				document.write(i + " x " + k + "=" + result + "<br>");
 			}
 			document.write("</div>");
 		}
-
 		var x = 1;
 		var sum = 0;
 		while(x<=100){
-			//sum = sum + x;
-			
+			//sum = sum + x; 
+			sum += x;
 			x++;
 		}
 		document.write(sum + "<br>");
-
-		var y =0;
+		var y = 0;
 		var ySum = 0;
-		while(y <30){
-			y+=3;   //y=y+3
-			if(y>100) break;
-
-			ySum+=y;
-			document.write(ySum + "<br>");
-
-
-		}
-		document.write("<hr>");
-		document.write(ySum);
-		var z= 0;
-		var zSum =0;
-		for(z=1;z<=100;z++){
-			if(z%3 ! =0){
-			continue;
+		while(1){
+			y+=3; // y=y+3
+			if(y>100) {
+				break;
 			}
-			zSum+= z;  //zSum +z;
-			document.write(zSum+ "<br>");
+			ySum+=y; //ySum = ySum + y;
+			document.write(y+"<br>");
+		}
+		document.write(ySum);
+		document.write("<hr>");
+		var z = 0;
+		var zSum = 0;
+		for(z=1;z<=100;z++){
+			if(z%3 != 0){
+				continue;
+			}
+			zSum += z; //zSum = zSum + z;
+			document.write(z+"<br>");
 		}
 		document.write(zSum+"<br>");
 	</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script>
+		var point = 90;
+		var grade="";
+		var comment =""; 
+		if(point>100){
+			comment = "0~ 100점 사이값을 이력하시오"
+
+		}else if(point>=90){
+			grade ="A";
+		}else if(point>=80){
+			grade = "B";
+		}else if(point>=70){
+			grade ="C";
+		}else if(point>=60){
+			grade =" D ";
+		}else if(point<=60){
+			grade = "F";
+		}
+		document.write("당신은"+ grade + "입니다");
+		// 그냥 위에만 쓰면 안나옴 이걸써야지만 나온다 
+	</script>
+	<style>
+		*{padding: 0px; margin: 0;}
+		li{list-style:none;}
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<ul>
+		<li>학점 </li>
+		<li>
+			<script>
+				document.write(grade);
+			</script>
+		</li>
+	</ul>
+</div>
+
+	
+</body>
+</html>
