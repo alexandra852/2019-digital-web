@@ -13,22 +13,21 @@
    <script>
       $(document).ready(function(){
          var myslider = $('.slider').bxSlider({
-            auto:true,
-            pager:false,
-            controls:false
+            auto:true,  //자동넘기기 
+            pager:false, //밑에 ㅇㅇㅇ이 없애는거 
+            controls:false 
          });
 
          $('.prevBtn').click(function(){
             myslider.goToPrevSlide();
-            return false;
+            return false;   //hash tag 방지 
          });
 
          $('.nextBtn').click(function(){
             myslider.goToNextSlide();
-            return false;
+            return false;  //hash tag 방지 
          });
-      });
-   </script>
+      });   </script>
    <style>
       body{background-color:skyblue;}
       img{display:block;}
@@ -80,8 +79,8 @@
      <li><img src="../images/pc02.jpg" /></li>
      <li><img src="../images/pc03.jpg" /></li>
    </ul>
-   <!-- <a href="javascript:void(0)"> 앵커테그 방지 -->
-   <div class="prevBtn"><a href="javascript:void(0)"><img src="images/btn_prev.png" alt=""></a></div>
+   <!-- <a href="javascript:void(0)"> 앵커테그 방지 인데 위이다가 return false를 써주면 안해도된다 . -->
+   <div class="prevBtn"><a href="javascript:void(0)" ><img src="images/btn_prev.png" alt=""></a></div>
    <div class="nextBtn"><a href="#"><img src="images/btn_next.png" alt=""></a></div>
 </div>
 <div class="box"></div>

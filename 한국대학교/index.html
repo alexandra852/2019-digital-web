@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>한국대학교</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+	#header_wrap{
+		height: 157px; 
+		background-color: gray;
+	}
+	#header_wrap>.header{
+		height: 40px;
+		background-color: #0044af;
+	}
+	.mian_header{
+		width: 1200px;
+		height: 40px; 
+		margin: 0 auto;
+		background-color: #0044af;
+		position: relative;
+	}
+
+
+
+
+	/*left*/
+	ul.left{width: 366px;height: 40px;}
+	ul.left>li{
+		float:left; 
+		width: 120px; 
+		background-color:#00163b; 
+		margin-right:2px;
+	}
+	ul.left>li>a{
+		color:white; 
+		display: block;
+		line-height:40px;
+		text-align: center;
+		font-weight: bold;
+	}
+	ul.left>li:first-child a{ background-color: #fff;  color:#a8a8a8;}
+
+	/*rigth*/
+	ul.right{position: absolute; right: 0;top: 0; }
+	ul.right>li{float: left;}
+	ul.right>li>a{
+		display:block; 
+		line-height: 40px;
+		text-align: center;
+		color:white;
+		padding: 0 20px;
+	}
+
+
+
+
+	.section_wrap{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.section>li{
+		width: 25%; 
+		height: 300px; 
+		float:left;
+		border: 1px solid #000;
+	}
+	.section>li:nth-child(2n){background-color:skyblue;}
+	.section>li:nth-child(1){width: 75%; border-top:none;}
+	.section>li:nth-child(8){width: 75%;}
+</style>
+</head>
+<div id="header_wrap">
+	<!-- util_menu -->
+	<div class="header">
+		<div class="mian_header">
+			<ul class="left clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+			</ul>
+			<ul class="right clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<li><a href="#">menu6</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="section_wrap">
+	<ul class="section">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>	
+	</ul>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>visual slider</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+	   $(document).ready(function(){
+         var myslider = $('.slider').bxSlider({
+         	touchEnabled:false,  
+         	//a테그 연결해주는거 이거 있어야 바뀜
+         	controls:false,    
+         	//기존 화살표 없애는거 
+         	pagerCustom:'.bx-pager' 
+         	//1누르면 1로넘어가고 2로누르면 2로 넘어가는거 하는거 
+
+
+         });
+         $('.prevBtn').click(function(){
+         	myslider.goToPrevSlide();
+         	return false;       //거꾸로 페이지 넘기는거 
+
+         })
+           $('.nextBtn').click(function(){
+         	myslider.goToNextSlide();
+         	return false;      //제대로 페이지 넘기는거 
+
+         })
+            
+         });
+	</script>
+
+	<style>
+		.bx-wrapper {
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          border: 0 none;
+          background: #fff;
+          margin-bottom:0;
+      }
+      .wrapper{
+      	/*background-color: blue;*/
+      }
+
+
+		.main_slider{width: 1260px; margin: 0 auto;
+		 position: relative;}
+		.main_slider li{}
+		.main_slider li img{}
+		.main_slider li h2{
+			position: absolute; 
+			top: 180px; left: 650px;
+			font-size:2em; }
+		.main_slider li p{
+			position: absolute; 
+			top: 250px; left:650px;
+
+		}
+		.main_slider li p:before{
+			content:"";
+			display: block;
+			border-top: 1px solid #fff;
+			padding-top: 25px;
+		}
+		.main_slider li .btn_more{
+		 position: absolute; top: 350px; left: 650px; 
+		 border: 1px solid #514f64; color:#514f65;
+		 padding:10px 30px;
+		 border-radius:30px ; /*동글동글하게 만드는거*/ 
+		font-weight: bold;
+		cursor: pointer; /*가져다 놓으면 손가락 생기는거 */
+		transition:0.3s;/* hover에 대상체에다가 넣어주면된다 조금 부드럽게 올라온다 */
+		}
+		.main_slider .btn_more:hover{
+			color:#fff; background-color: #514f64;
+		}
+		.prevBtn,.nextBtn{
+			position: absolute;    
+			top: 300px; 
+		}
+		.prevBtn{left: 20px;}
+		.nextBtn{right: 20px;}
+
+
+
+		/*custom pager*/
+		.main_slider_pager{
+			width: 1260px; 
+			margin: 0 auto;
+		}
+		.bx-pager a{
+			width: 25%; 
+			display: block; 
+			float: left; 
+			text-align: center;
+			line-height: 70px;
+			font-weight:bold;
+			font-size: 2em;
+			background-color: #514f64;
+
+		}
+
+		a.active{background-color:#ffc30b;}
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+			<div class="main_slider_pager">
+				<div class="bx-pager clearfix">
+				<a href="#" data-slide-index="0" >menu 1</a>
+				<a href="#" data-slide-index="1">menu 2</a>
+				<a href="#" data-slide-index="2">menu 3</a>
+				<a href="#" data-slide-index="3">menu 4</a>
+				</div>
+		<div class="main_slider">
+			<ul class="slider">
+				<li>
+					<img src="images/main_slider01.jpg" alt="img01">   
+					 <!-- alt꼭 적어놔야된다 안적음 감점당한다  -->
+					 <h2>사랑과 행복을 나누는 마음1</h2>
+					 <p>우리 사회에는 따듯한 손길을 필요로 하는 분들이 많습니다.</p>
+					 <div class="btn_more" >
+					 	<a href="https://www.naver.com">나눔재단바로가기</a></div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="img01">   
+					 <!-- alt꼭 적어놔야된다 안적음 감점당한다  -->
+					 <h2>사랑과 행복을 나누는 마음2</h2>
+					 <p>우리 사회에는 따듯한 손길을 필요로 하는 분들이 많습니다.</p>
+					 <div class="btn_more">나눔재단바로가기</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="img01">   
+					 <!-- alt꼭 적어놔야된다 안적음 감점당한다  <--></-->
+					 <h2>사랑과 행복을 나누는 마음3</h2>
+					 <p>우리 사회에는 따듯한 손길을 필요로 하는 분들이 많습니다.</p>
+					 <div class="btn_more">나눔재단바로가기</div>
+				</li>
+				<li>
+					<img src="images/main_slider01.jpg" alt="img01">   
+					 <!-- alt꼭 적어놔야된다 안적음 감점당한다  -->
+					 <h2>사랑과 행복을 나누는 마음4</h2>
+					 <p>우리 사회에는 따듯한 손길을 필요로 하는 분들이 많습니다.</p>
+					 <div class="btn_more">나눔재단바로가기</div>
+				</li>
+			</ul>
+			<div class="prevBtn">
+				<a href="#">
+					<img src="images/btn_prev.png" alt="prevBtn">
+				</a>
+			</div>
+			<div class="nextBtn">
+				<a href="#">
+					<img src="images/btn_next.png" alt="nextBtn">
+				</a>
+			</div>
+		
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

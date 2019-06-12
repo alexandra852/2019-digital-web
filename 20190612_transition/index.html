@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		div.box{
+			width: 100px; 
+			height: 100px; 
+			background-color:#f00;
+			transition:all 0.4s ease; //*width 2s, height 4s 커지는거;
+			/*transition-property:width,height;*/
+			/*transition-delay:2s;*/ /*몇초 있다가 커질꺼냐 */
+			/*transition-duration: 2s;*/
+		    /*transition-timing-function:linear;*/ /* 똑같은 시간으로 커지는거 ease처음에는 빨라졌가느려지는거*/ 
+
+
+		}
+		div.box:hover{
+			width: 300px; 
+			height: 300px;
+			background-color:blue;
+		}
+
+		div.wrap{width: 300px;height: 300px;
+			background-color: skyblue;
+			position: relative;
+			cursor:pointer;
+			overflow:hidden;
+			border-radius:150px;
+
+
+		}
+		div.wrap > div.overlay{
+			width: 300px;height: 300px;
+			/*background-color: black;*/
+			background-color:rgba(0,0,0,0);/*마지막은 투명도 0~1 값을 넣어주면됨*/
+			color:white;
+			position: absolute;
+			/*bottom: -300px;*/
+			top:0;
+			left:-300px;
+			transition:0.5s;   /*움직이는거 에다가 넣어줘야됨 */
+			/*opacity: 0.7; */    /*투명도*/
+			/*opacity: 0;*/     /*투명도*/
+			font-weight: bold; /*글짜 찐해지게 하는거 */
+		}
+		div.wrap img{display: block;} /*간격이 이상하다면 꼭 넣어야되는거 */
+		div.wrap:hover div.overlay{
+			/*bottom:0; */
+			top: 0;
+			left:0;
+			opacity:1;
+			background-color:rgba(0,0,0,0.5);  /*글짜는 그대로이고 뒷배경만 투명도를 줄때 */
+		}
+		div.text{
+			width: 150px; background-color:skyblue;
+			line-height: 50px;
+			text-align: center;
+			left:50%;
+			top:50%;
+			position:absolute;
+			/*margin-left:-72.5px; margin-top:-25px;*/
+			transform:translate(-50%,-50%); /*자기 자신의 반을 옮겨준다 중간오게 하는거 */ 
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="box"></div>
+		<br>
+
+		<div class="wrap">
+			<img src="../images/testimg.jpg" alt="testimg">
+			<div class="overlay">
+				<div class="text">
+					Lorem ipsum.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	   <style>
+      .content{
+      	width:1230px;
+      	margin:0 auto;
+      }
+      .content li{
+         float:left;
+         width:300px;
+         height:300px;
+         position: relative;
+         overflow:hidden;
+         border-radius:600px;
+         margin-right:10px;
+         cursor:pointer;
+
+
+      }
+      .content li:last-child{margin-right:0;}
+      .content img{display:block;}
+      .content .overlay{
+         width: 300px;
+         height: 300px;
+         position:absolute;
+         bottom:-300px;
+         background-color: black;
+         transition:0.3s;
+         opacity:0;
+      }
+      .content .title{
+      	color:white;
+      	width: 150px;
+      	height: 50px;
+      	background-color:gray;
+        text-align:center;
+        line-height:50px;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        position:absolute;border-radius:150px;
+      }
+
+      .content>li:hover .overlay{
+      	bottom: 0;
+      	opacity:0.7;
+      }
+      .content_wrap{padding: 20px;;}
+      .content_wrap>h2{
+      	text-align:center; 
+      	padding-bottom:20px;
+      }
+      .content_wrap>h2:after{
+      	content:"";
+      	display:block;
+      	width: 150px;
+      	height: 5px;
+      	background-color:#000;
+      	margin: 10px auto;
+  }
+      .content_wrap>p{
+      	text-align: center;
+      	margin-bottom: 40px;
+      }
+      .orange{background-color: orange;}
+      .skyblue{background-color: skyblue;}
+      .back01{
+      	background: url(../images/pc01.jpg) 
+      	no-repeat center;background-size:cover;
+      	background-attachment:fixed; } /* 모바일로는 안된다 */
+
+   </style>
+<div class="content_wrap orange">
+	<h2>GALLERY</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, reprehenderit.</p>
+   <ul class="content clearfix">
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+   </ul>
+</div>
+<div class="content_wrap back01">
+	<h2>GALLERY</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, reprehenderit.</p>
+   <ul class="content clearfix">
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+   </ul>
+</div>
+<div class="content_wrap skyblue">
+	<h2>GALLERY</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, reprehenderit.</p>
+   <ul class="content clearfix">
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+      <li>
+         <img src="../images/testimg.jpg" alt="">
+         <div class="overlay">
+         <div class="title">Lorem ipsum.</div>
+         </div>
+      </li>
+   </ul>
+</div>
+<style>
+	.section01{
+		width: 300px;
+		height: 300px;
+		position: relative;
+		overflow:hidden;   /*영역만큼한 화면을 보여준다*/ 
+	}
+	.section01 img{display:block;}
+	.section01>.over{
+		width: 300px;
+		height: 300px;
+		background-color: orange;
+		position: absolute;
+		top:300px;
+		transition:0.3s;
+	}
+	.section01:hover .over{bottom:0;}
+</style>
+
+	<div class="section01">
+		<img src="../images/testimg.jpg" alt="">
+		<div class="over">
+		<div class="last Text">Lorem ipsum.</div>
+        </div>
+	</div>
+</div>
+</body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var myslider = $('.slider').bxSlider({
+				mode:'vertical',
+				pager:false,
+				controls:false,
+				auto:true
+
+			});
+		 $('.do').click(function(){
+         	myslider.goToPrevSlide();
+         	return false;       
+
+         });
+           $('.up').click(function(){
+         	myslider.goToNextSlide();
+         	return false;      
+
+         });
+		});
+	</script>
+	<style>
+		body{background-color: #cdcdcd;}
+		.wrapper{width: 1050px;height: 100px; /*background-color: skyblue;*/position: relative;
+			margin: 0 auto;
+		}
+		.slider > div{height: 80px; /*background-color: skyblue;*/ position: absolute;}
+		.slider .iconPhoto {
+			width:50px; height: 50px; 
+			border-radius:25px;     /*  원을 만들때 이걸로 만든다 */ 
+			text-indent: -9999999px;
+			background: red url(../images/testimg.jpg) no-repeat center;}
+		.slider .title{
+			width:300px; 
+			line-height: 25px; 
+			font-size: 1.2em; 
+			font-weight:bold; 
+			color:red;
+			position: absolute;
+			left: 60px;top: 0;
+		}
+		.slider .subject{
+			width: 800px;
+			line-height: 40px;
+			background-color: #fff;
+			border-radius:20px;
+			padding: 5px 20px;
+			position: absolute;
+			left:60px; bottom:0;		}
+		.slider .subject:after{
+			content:"";
+			border-width:10px;
+			border-style: solid;
+			/*border-color:red orange yellow green;*/
+			border-color:transparent blue transparent  transparent ;    
+			/*원래 사각형인데 삼각형 만들려고 하는거 */
+			position: absolute;
+			/*right:-23px; top: 15px;*/
+			left: -23px;top: 15px;
+		}
+		.bx-wrapper {
+   			-moz-box-shadow: none;
+   			-webkit-box-shadow: none;
+ 		 	box-shadow: none;
+   		 	border: none;
+   			background:none;
+        }
+        .up,.do{ position: absolute; top:40px;}
+        .up{right:160px; /*_margin-bottom: 10px;*/ cursor: pointer;}
+        .do{right:160px; margin-top: 20px; cursor: pointer;}
+        img{display: block}   /**이미지자체를 블록단위로 만들어주는것*/ 
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+	<div class="slider">
+		<div>
+			<div class="iconPhoto">사진</div>
+			<div class="title">컴퓨터학과</div>
+			<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+			
+		</div>
+		<div>
+			<div class="iconPhoto">사진</div>
+			<div class="title">디지털미디어</div>
+			<div class="subject">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>	
+		</div>
+	</div>
+		<div class="up">
+				<img src="../images/up.png" alt="up">
+			</div>
+		<div class="do">
+				<img src="../images/do.png" alt="up">
+		</div>
+</div>
+
+	<ul class="slider111">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

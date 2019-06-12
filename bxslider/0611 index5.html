@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+		var myslider =$('.slider').bxSlider({
+				controls:false,
+				pagerCustom:'.bx-pager',
+				touchEnabled:false
+			});
+			$('.prev').click(function(){
+				myslider.goToPrevSlide();
+				return false;
+
+			});
+				$('.next').click(function(){
+				myslider.goToNextSlide();
+				return false;
+
+			});
+
+		});
+	</script>
+	<style>
+		.wrapper{
+			background-color:#000;
+		}
+	
+		.min_slider{
+			width: 1200px; 
+			margin: 0 auto; 
+			position: relative;
+		}
+		.min_slider li{}
+		.min_slider li h2{
+			position: absolute;
+			top: 220px;
+			left: 600px;
+			font-size:1.5em;
+			color:white;
+
+
+
+		}
+		.min_slider li p{
+			position: absolute;
+			top:260px;
+			left:500px;
+			color:white;
+		
+		}
+		.min_slider li p:before{
+			content:"";
+			display:block;
+			border-top: 1px solid white;
+			padding-top:10px;
+		}
+		.min_slider li img{}
+		.min_slider li .btm_more{
+			position: absolute;
+			top: 300px; left: 850px;
+			border: 1px solid white;
+			color:white;
+			border-radius: 30px;
+			font-weight: bold;
+			cursor:pointer;
+			padding: 10px 30px;
+			transition: 0.3s;
+		}
+
+		.min_slider li .btm_more:hover{
+			background-color: darkblue;
+			border: none;
+		}
+
+
+        .prev,.next{
+        	position: absolute;
+        	top: 220px;
+        }
+		.prev{left: 15px;}
+		.next{right: 15px;}
+
+		.bx-wrapper {
+   		-moz-box-shadow:none;
+    	-webkit-box-shadow:none;
+   		 box-shadow: none;
+   		 border: 0 none;
+    	background: #fff;
+    	margin-bottom: 0;
+		}
+		.bx-pager a{
+			width: 33.333333%;
+			display: block;
+			float: left;
+			line-height: 50px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.5em;
+			background-color:#3b6785;
+			color:white;
+			border-right: 1px solid white;
+		}
+		a.active{background-color: white; color:#000;}
+		.bx-pager a:last-child{
+			border-right:none;
+		}
+		
+		.btm_more>a{
+			color:white;
+		}
+
+
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="min_slider">
+			<ul class="slider">
+				<li>				
+				<h2>Lorem ipsum dolor sit amet.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, accusantium .</p>
+				<div class="btm_more">
+					<a href="https://www.naver.com">Lorem ipsum dolor.</a></div>
+				<img src="../images/pc01.jpg" alt="우주">
+				</li>
+				<li>				
+				<h2>Lorem ipsum dolor sit amet.2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, accusantium .</p>
+				<div class="btm_more">Lorem ipsum dolor.</div>
+				<img src="../images/pc02.jpg" alt="우주">
+				</li>
+				<li>				
+				<h2>Lorem ipsum dolor sit amet.3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, accusantium.</p>
+				<div class="btm_more">Lorem ipsum dolor.</div>
+				<img src="../images/pc03.jpg" alt="우주">
+				</li>
+			</ul>
+			<div class="prev">
+				<img src="images/btn_prev.png" alt="prev.png">
+			</div>
+			<div class="next">
+				<img src="images/btn_next.png" alt="prev.png">
+			</div>
+			<div class="main_slider_pager">
+				<div class="bx-pager clearfix">
+					<a href="#" data-slide-index="0">menu1</a>
+					<a href="#" data-slide-index="1">menu2</a>
+					<a href="#" data-slide-index="2">menu3</a>
+			
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
