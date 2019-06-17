@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>hover</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		img{
+			display: block;
+		}
+		ul li{
+			width: 300px; height: 225px; 
+			background-color:pink
+			;position: relative; 
+			overflow:hidden;
+		}
+		ul li .img01{
+			position: absolute;
+			z-index:1;
+			cursor:pointer;
+		}
+		ul li .img02{
+			position: absolute; 
+			top: 0; 
+			transition: 0.3s;
+			     
+			/* 움질일려는 물체한테 주면된다 
+			크기 100%=1 이다 1.2를 넣으면 이미지가 커진다*/
+		}
+		/*li:hover .img02{top: 0;}*/
+		ul li .back{
+			width: 300px; 
+			height: 225px; 
+			background-color: #000; 
+			position: absolute;
+			opacity:0;       /*투명도*/
+			transition:0.3s;
+		}
+		/*li:hover .back{opacity:0.5;}*/
+	/*	li:hover .img02{transform:scale(0.9);}
+		li:hover .img02{top: 0;}
+*/
+		li .img01:hover ~ div.back{opacity:0.5;}
+		li .img01:hover + img.img02{transform:scale(1.2);}
+
+	</style>
+</head>
+<body>
+	<ul>
+		<a href="#" onclick="location.href='http://www.naver.com'">
+			<li>
+				<img src="../images/01.png" alt="" class="img01">
+				<img src="../images/img6.jpg" alt="" class="img02">
+				<div class="back"></div>
+			</li>
+		</a>
+	</ul>
+
+
+
+
+
+	<ul>
+		<li>
+			<p>Lorem ipsum dolor sit amet.</p><span>2019-10-16</span>
+		</li>
+		<li>
+			<p>Lorem ipsum dolor sit amet.</p><span>2019-10-16</span>
+		</li>
+		<li>
+			<p>Lorem ipsum dolor sit amet.</p><span>2019-10-16</span>
+		</li>
+		<li>
+			<p>Lorem ipsum dolor sit amet.</p><span>2019-10-16</span>
+		</li>
+		<li><p>Lorem ipsum dolor sit amet.</p><span>2019-10-16</span>
+		</li>
+	</ul>
+	
+</body>
+</html>
