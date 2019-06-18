@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+
+	<style>
+		body{background-color: pink;}
+		.box_wrap{
+			width: 300px;height: 300px;
+			background-color: skyblue;
+			position: absolute;
+			overflow:hidden;
+			left: 50%; top: 50%;
+			cursor: pointer;
+			transform: translate(-50%,-50%);   /*가운데 오게하는거 자신의 반을 쪼개서 보낸다 */
+
+
+		}
+		.box_wrap:hover .box1{width: 100px; height: 100px; background-color:skyblue; transform:translate(300px,-100px) rotate(45deg);transition:0.5s;}
+		.box_wrap:hover .box2{width: 100px; height: 100px; background-color:skyblue; transform:translate(300px,300px) rotate(45deg);transition:.5s;}
+		.box_wrap:hover .box3{width: 100px; height: 100px; background-color:skyblue; transform:translate(-100px,300px) rotate(45deg);transition:.5s;}
+		.box_wrap:hover .box4{width: 100px; height: 100px; background-color:skyblue; transform:translate(-100px,-100px) rotate(45deg);transition:0.5s;}
+		
+
+
+
+
+		.box1{
+			width: 100px; height: 100px;
+			background-color:pink;
+			position: absolute;
+			transform:translate(250px,-50px) 
+			rotate(45deg)
+			;}
+		.box2{width: 100px; height: 100px;
+			background-color:pink;
+			position: absolute;
+			transform:translate(250px,250px) 
+			rotate(45deg)
+			;}
+		.box3{
+			width: 100px; height: 100px;
+			background-color:pink;
+			position: absolute;
+			transform:translate(-50px,250px) 
+			rotate(45deg)
+			;}
+		.box4{
+			width: 100px; height: 100px;
+			background-color:pink;
+			position: absolute;
+			transform:translate(-50px,-50px) 
+			rotate(45deg)
+			;}
+
+			.box_wrapper{
+				width: 200px;height: 200px;
+				position: absolute;
+				left: 50%; top: 50%;
+				transform: translate(-50%,-50%);
+				overflow: hidden;	
+				background-color:darkblue;	
+				}
+
+
+			.box{
+				width: 200px;height: 200px;
+				background-color: blue;
+				transition:.3s;
+				position: absolute;
+				transform-origin: 50% 0;    /* 꼭짓점 */
+			}
+			.box:hover{transform:rotate(15deg);
+				/*transform-origin:0 0;*/
+			}
+	</style>
+		
+</head>
+<body>
+
+<!-- 	<div class="box_wrap">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+	</div> -->
+
+<div class="box_wrapper">
+	<dov class="box"></dov>
+</div>
+</body>
+</html>
