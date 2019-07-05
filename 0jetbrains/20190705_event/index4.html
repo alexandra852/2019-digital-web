@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>이미지 아다다다닥하는거</title>
+	<script>
+		var files = [
+		"../../images/img1.jpg",
+		"../../images/img2.jpg",
+		"../../images/img3.jpg",
+		"../../images/img4.jpg",
+		"../../images/img5.jpg",
+		"../../images/img6.jpg",
+		"../../images/img7.jpg"
+		];
+		var next =1;
+		function change(img){
+			img.src=files[next];
+			next++; //next = next +1;
+			//if(next = 7) next=0 {}를 써도 되고 안써도되고!;
+			next %= files.length; //next = next % 7
+			console.log(img.src);
+		}
+	</script>
+</head>
+<body>
+	<img src="../../images/img1.jpg" alt="img1" onclick="change(this)">
+	
+</body>
+</html>
