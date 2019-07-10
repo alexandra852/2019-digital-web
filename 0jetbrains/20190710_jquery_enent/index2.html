@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.tabWrap{
+			width: 500px; 
+			margin: 0 auto;
+		}
+		.tabWrap>ul{}
+		.tabWrap>ul>li{
+			float:left; 
+			width: 20%;
+			line-height: 40px; 
+			text-align: center;
+			border-right: 1px solid #000;
+			cursor: pointer;
+		}
+		.tabWrap>ul>li:first-child{border-left: 1px solid #000;}
+		.tabWrap>ul>li:hover{color: skyblue;}
+		.boxWrap >div{display: none;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".boxWrap > div").hide();
+			$(".boxWrap >div").eq(0).show();
+
+			$(".tabWrap>ul>li").click(function(){
+				var a =$(this).index();
+				console.log(a);
+				$(".boxWrap > div").hide();
+				$(".boxWrap > div").eq(a).show();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="tabWrap">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxWrap">
+			<div class="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At tempora voluptatum debitis praesentium nisi vel porro ea. Deleniti, quod, voluptatibus!</div>
+			<div class="box2">Id expedita nihil, magni sapiente ducimus esse, aut officia consequatur quo. Ipsum fuga assumenda reiciendis iure animi nostrum fugiat similique.</div>
+			<div class="box3">Fugiat vero pariatur molestiae voluptatum perferendis ipsum deleniti veritatis error, inventore sapiente cumque optio harum dolores ad similique reiciendis. Quidem.</div>
+			<div class="box4">Officiis commodi praesentium, consectetur natus repellat. Iure eligendi vitae dolor, veniam, blanditiis iste voluptatem consectetur perspiciatis enim porro ut culpa!</div>
+			<div class="box5">Accusantium, sed corporis sapiente sint voluptatum fugit fuga numquam est, atque vel! Sed fugit libero soluta ea corporis architecto ut?</div>
+		</div>
+	</div>
+	
+</body>
+</html>
