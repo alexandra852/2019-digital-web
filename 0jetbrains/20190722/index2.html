@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.wrap_warp{
+			width: 1000px;
+			height: 300px;
+			/*background-color:pink;*/
+			margin: 20px auto;
+			overflow:hidden;
+
+		}
+		.wrap{
+			width: 1000px;
+			position: relative;
+		}
+		.wrap ul{}
+		.wrap ul li{
+			float: left;
+			width:200px;
+			height:60px;
+			border-radius:10px 10px 0 0;
+			background-color: #cdcdcd;
+			text-align:center;
+			line-height:60px;
+			cursor:pointer;
+			color:darkgray
+		}
+		.wrap ul li.active{
+			background-color: orange;color:white;
+		}
+		.wrap ul li:hover{
+			background-color:white; color:orange;
+		}
+		.box{
+			width: 5000px; 
+			position: absolute;
+
+
+		}
+		.box div{
+			width: 1000px;
+			float:left;
+
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".wrap > ul > li").click(function(){
+				var i =$(this).index();
+				var move = i*1000*-1;
+				console.log(i);
+				$(".wrap > ul > li").removeClass();
+				$(this).addClass("active");
+				$(".box").stop().animate({left:move});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap_warp">
+		<div class="wrap clearfix">	
+			<ul class="clearfix">
+				<li class="active">menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+			<div class="box clearfix">
+				<div>
+				Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio sed sequi. Iure maxime, et placeat nostrum, repudiandae veritatis voluptatum cupiditate eius ipsa. Blanditiis, ratione. Dolorum eos, atque quis, enim et quasi corrupti recusandae ipsa corporis tenetur, adipisci repudiandae quisquam incidunt aspernatur id assumenda maiores animi blanditiis vero non, architecto aliquid alias libero! Illo maiores deserunt inventore quasi nemo obcaecati ab eligendi recusandae magni id ipsam architecto, dolorem voluptatibus blanditiis tenetur, tempore molestiae labore, eos quaerat voluptate optio! Totam animi atque neque corporis ratione nemo facilis eaque veniam. Eligendi est ullam natus autem, quae voluptatum, beatae doloribus. Maxime, laboriosam impedit!
+				</div>
+				<div>
+				Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio sed sequi. Iure maxime, et placeat nostrum, repudiandae veritatis voluptatum cupiditate eius ipsa. Blanditiis, ratione. Dolorum eos, atque quis, enim et quasi corrupti recusandae ipsa corporis tenetur, adipisci repudiandae quisquam incidunt aspernatur id assumenda maiores animi blanditiis vero non, architecto aliquid alias libero! Illo maiores deserunt inventore quasi nemo obcaecati ab eligendi recusandae magni id ipsam architecto, dolorem voluptatibus blanditiis tenetur, tempore molestiae labore, eos quaerat voluptate optio! Totam animi atque neque corporis ratione nemo facilis eaque veniam. Eligendi est ullam natus autem, quae voluptatum, beatae doloribus. Maxime, laboriosam impedit!
+				</div>
+				<div>
+				Lorem3 ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio sed sequi. Iure maxime, et placeat nostrum, repudiandae veritatis voluptatum cupiditate eius ipsa. Blanditiis, ratione. Dolorum eos, atque quis, enim et quasi corrupti recusandae ipsa corporis tenetur, adipisci repudiandae quisquam incidunt aspernatur id assumenda maiores animi blanditiis vero non, architecto aliquid alias libero! Illo maiores deserunt inventore quasi nemo obcaecati ab eligendi recusandae magni id ipsam architecto, dolorem voluptatibus blanditiis tenetur, tempore molestiae labore, eos quaerat voluptate optio! Totam animi atque neque corporis ratione nemo facilis eaque veniam. Eligendi est ullam natus autem, quae voluptatum, beatae doloribus. Maxime, laboriosam impedit!
+				</div>
+				<div>
+				Lorem4 ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio sed sequi. Iure maxime, et placeat nostrum, repudiandae veritatis voluptatum cupiditate eius ipsa. Blanditiis, ratione. Dolorum eos, atque quis, enim et quasi corrupti recusandae ipsa corporis tenetur, adipisci repudiandae quisquam incidunt aspernatur id assumenda maiores animi blanditiis vero non, architecto aliquid alias libero! Illo maiores deserunt inventore quasi nemo obcaecati ab eligendi recusandae magni id ipsam architecto, dolorem voluptatibus blanditiis tenetur, tempore molestiae labore, eos quaerat voluptate optio! Totam animi atque neque corporis ratione nemo facilis eaque veniam. Eligendi est ullam natus autem, quae voluptatum, beatae doloribus. Maxime, laboriosam impedit!
+				</div>
+				<div>
+				Lorem5 ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio sed sequi. Iure maxime, et placeat nostrum, repudiandae veritatis voluptatum cupiditate eius ipsa. Blanditiis, ratione. Dolorum eos, atque quis, enim et quasi corrupti recusandae ipsa corporis tenetur, adipisci repudiandae quisquam incidunt aspernatur id assumenda maiores animi blanditiis vero non, architecto aliquid alias libero! Illo maiores deserunt inventore quasi nemo obcaecati ab eligendi recusandae magni id ipsam architecto, dolorem voluptatibus blanditiis tenetur, tempore molestiae labore, eos quaerat voluptate optio! Totam animi atque neque corporis ratione nemo facilis eaque veniam. Eligendi est ullam natus autem, quae voluptatum, beatae doloribus. Maxime, laboriosam impedit!
+				</div>
+		
+			</div>	
+		</div>
+	</div>
+	
+</body>
+</html>

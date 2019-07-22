@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<style>
+		.content_wrap{width: 1000px;margin: 23px auto}
+		.content_wrap ul{}
+		.content_wrap ul li{
+			float: left;
+			width:200px;
+			height:60px;
+			border-radius:10px 10px 0 0;
+			background-color: #cdcdcd;
+			text-align:center;
+			line-height:60px;
+			cursor:pointer;
+			color:darkgray
+		}
+		.content_wrap ul li:hover{
+			background-color: white;
+			color: black;
+			border-radius:10px 10px 0 0;
+
+		}
+		.content_wrap ul li.active{
+			background-color:orange; color:white;
+			border-radius:10px 10px 0 0;
+		}
+		.box{
+			width: 1000px;
+			margin: 0 auto;
+			border: 1px solid orange;
+		}
+		.box div{
+			
+			display:none;
+			padding:25px;
+
+		}
+		.box div.on{display:block;}
+
+		.content ul li a:hover{background-color: blue; color:white; border-radius:10px 10px 0 0;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$(".content_wrap > ul >li").click(function(){
+				var i =$ (this).index();
+				console.log(i);
+				$(".content_wrap > ul >li").removeClass();
+				$(this).addClass("active");
+				$(".box > div").hide();
+				$(".box > div").eq(i).fadeIn();
+				
+			})
+		});
+	</script>
+</head>
+<body>
+	<div class="content_wrap">
+			<ul class="clearfix">
+				<li class="active">menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		<div class="box">
+		<div class="on">Lorem1 ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime mollitia laboriosam, iste corrupti natus eum voluptatibus dolor recusandae eius. Ad voluptas nulla aliquam labore sequi. Quo natus officiis autem velit quos inventore, iure blanditiis aspernatur voluptatibus veritatis illo molestias ipsam harum odio. Rerum totam dolores laudantium, ducimus dolore nisi atque maiores iste laborum deleniti maxime fuga provident reiciendis quidem eos, veritatis fugit magnam iusto dolorum culpa assumenda deserunt aliquam quam amet. Qui ullam dignissimos iusto vero quis temporibus quidem, dolore accusantium quisquam voluptates exercitationem accusamus odit perspiciatis reprehenderit beatae deserunt illo aliquid cupiditate similique! Officiis tenetur accusamus doloremque culpa.</div>
+		<div>Lorem2 ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime mollitia laboriosam, iste corrupti natus eum voluptatibus dolor recusandae eius. Ad voluptas nulla aliquam labore sequi. Quo natus officiis autem velit quos inventore, iure blanditiis aspernatur voluptatibus veritatis illo molestias ipsam harum odio. Rerum totam dolores laudantium, ducimus dolore nisi atque maiores iste laborum deleniti maxime fuga provident reiciendis quidem eos, veritatis fugit magnam iusto dolorum culpa assumenda deserunt aliquam quam amet. Qui ullam dignissimos iusto vero quis temporibus quidem, dolore accusantium quisquam voluptates exercitationem accusamus odit perspiciatis reprehenderit beatae deserunt illo aliquid cupiditate similique! Officiis tenetur accusamus doloremque culpa.</div>
+		<div>Lorem3 ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime mollitia laboriosam, iste corrupti natus eum voluptatibus dolor recusandae eius. Ad voluptas nulla aliquam labore sequi. Quo natus officiis autem velit quos inventore, iure blanditiis aspernatur voluptatibus veritatis illo molestias ipsam harum odio. Rerum totam dolores laudantium, ducimus dolore nisi atque maiores iste laborum deleniti maxime fuga provident reiciendis quidem eos, veritatis fugit magnam iusto dolorum culpa assumenda deserunt aliquam quam amet. Qui ullam dignissimos iusto vero quis temporibus quidem, dolore accusantium quisquam voluptates exercitationem accusamus odit perspiciatis reprehenderit beatae deserunt illo aliquid cupiditate similique! Officiis tenetur accusamus doloremque culpa.</div>
+		<div>Lorem4 ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime mollitia laboriosam, iste corrupti natus eum voluptatibus dolor recusandae eius. Ad voluptas nulla aliquam labore sequi. Quo natus officiis autem velit quos inventore, iure blanditiis aspernatur voluptatibus veritatis illo molestias ipsam harum odio. Rerum totam dolores laudantium, ducimus dolore nisi atque maiores iste laborum deleniti maxime fuga provident reiciendis quidem eos, veritatis fugit magnam iusto dolorum culpa assumenda deserunt aliquam quam amet. Qui ullam dignissimos iusto vero quis temporibus quidem, dolore accusantium quisquam voluptates exercitationem accusamus odit perspiciatis reprehenderit beatae deserunt illo aliquid cupiditate similique! Officiis tenetur accusamus doloremque culpa.</div>
+		<div>Lorem5 ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime mollitia laboriosam, iste corrupti natus eum voluptatibus dolor recusandae eius. Ad voluptas nulla aliquam labore sequi. Quo natus officiis autem velit quos inventore, iure blanditiis aspernatur voluptatibus veritatis illo molestias ipsam harum odio. Rerum totam dolores laudantium, ducimus dolore nisi atque maiores iste laborum deleniti maxime fuga provident reiciendis quidem eos, veritatis fugit magnam iusto dolorum culpa assumenda deserunt aliquam quam amet. Qui ullam dignissimos iusto vero quis temporibus quidem, dolore accusantium quisquam voluptates exercitationem accusamus odit perspiciatis reprehenderit beatae deserunt illo aliquid cupiditate similique! Officiis tenetur accusamus doloremque culpa.</div>
+	</div>
+	</div>
+	
+	
+</body>
+</html>
