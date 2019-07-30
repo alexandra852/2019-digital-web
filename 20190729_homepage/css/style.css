@@ -296,6 +296,7 @@ body{min-width:1260px;}
 .content li.content11st,
 .content li.content12st
 {display:none;}
+
 .content li.content3st{width: 100% !important;position: relative;;}
 .content li.content3st h2{width:200px;position: absolute;top: 20px;left: 20px;z-index:1;}
 .content li.content3st .slide2 li{width: 100% !important;}
