@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var cnt =0
+			$(".box").mousemove(function(e){
+				cnt++;
+				if(cnt%10 == 0){
+					console.log(e.pageX+","+e.pageY);
+					// $(".div1").css({left:e.pageX+20,top:e.pageY+20});
+					$(".div1").animate({left:e.pageX+20,top:e.pageY+20},100,function(){
+						$(".div2").animate({left:e.pageX+40,top:e.pageY+40},100,function(){
+							$(".div3").animate({left:e.pageX+60,top:e.pageY+60},100,function(){
+								$(".div4").animate({left:e.pageX+60,top:e.pageY+60},100)
+							})
+						})
+					});
+				}
+			});
+		});
+	</script>
+	<style>
+		body{margin:0;padding:0;}
+		.box{width: 500px;height: 500px;background-color:skyblue;position: relative;overflow:hidden;}
+		.div1{width: 100px;height: 100px;position: absolute;background-color:tomato; border-radius:50%;}
+		.div2{width:50px;height:50px;position: absolute;background-color:orange;border-radius:50%;}
+		.div3{width:30px;height:30px;position: absolute;background-color:blue;border-radius:50%;}
+		.div4{width:10px;height:10px;position: absolute;background-color:black;border-radius:50%;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="div1"></div>
+		<div class="div2"></div>
+		<div class="div3"></div>
+		<div class="div4"></div>
+	</div>
+</body>
+</html>

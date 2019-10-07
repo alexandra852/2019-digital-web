@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<style>
+		*{margin:0;padding:0; box-sizing:border-box;}
+		li{list-style:none;}
+		a:link,a:visited{color:black;}
+		a{text-decoration:none;}
+		.clearfix:after{content:"";clear:both;display:block;}
+
+		.menu{width: 500px;height: 100px;background-color:blue;}
+		.menu>ul{}
+		.menu>ul>li{float:left;}
+		.menu>ul>li>a{display:block;text-align:center;color:white;padding:0 20px;}
+	</style>
+	<script>
+		function init(){
+		var li2 = document.getElementById("li2");
+		li2.onmouseover = over;
+		li2.onmouseout = 	out;
+		var li3 = document.getElementById("li3");
+		li3.addEventListener("mouseover",over1);
+		li3.addEventListener("mouseout",out1);
+		}
+		
+		function over(){
+			li2.style.backgroundColor = "white";
+			li2.style.Color = "pink";
+		}
+		function out(){
+			li2.style.backgroundColor = "blue";
+		}
+		function over1(){
+			li3.style.backgroundColor = "white";
+			li3.innerHTML = "메뉴";
+			li3.style.color ="black"
+		}
+		function out1(){
+			li3.innerHTML = "menu3";
+			li3.style.color = "white";
+			li3.style.backgroundColor = "blue";
+		}
+	</script>
+</head>
+<body onload="init()">
+	<div class="menu" >
+		<ul>
+			<li 
+			onmouseover="this.style.backgroundColor='white'" 
+			onmouseover="innerHTML = '메뉴'" 
+			onmouseout="this.style.backgroundColor='blue'">
+			<a href="#">menu1</a>
+			</li>
+			<li class="li2"><a href="#">menu2</a></li>
+			<li class="li3"><a href="#">menu3</a></li>
+		</ul>
+	</div>
+</body>
+</html>
